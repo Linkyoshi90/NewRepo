@@ -1,16 +1,20 @@
 {% extends 'base.html.twig' %}
-
-
 {% block title %}
-Title this is
+To Do List
 {% endblock %}
-
 {% block body %}
   <div class="header">
-    <h2>My To Do List</h2>
+    <h2>To Do List</h2>
     <form method="POST" action="{{path('create_task')}}">
       <input name="title" type="text" id="myInput" placeholder="Task title..." />
       <button type="submit" class="addBtn">Add a task</button>
+    </form>
+    <form method="POST" name="selector">
+      <select name="sort" class="sorter" onChange=alertVarchange()>
+          <option value="id">ID</option>
+          <option value="status">Status</option>
+          <option value="title">Title</option>
+      </select>
     </form>
   </div>
   <ul>
@@ -29,7 +33,10 @@ Title this is
 
 {% block javascripts %}
 <script>
-    //alert('Hi');
+function alertVarchange() {
+  var a = document.getElementById("sort");
+  alert(a.options[a.selectedIndex].value);
+}
 </script>
 {% endblock %}
 
