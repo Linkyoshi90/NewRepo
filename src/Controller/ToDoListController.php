@@ -13,8 +13,23 @@ class ToDoListController extends AbstractController
      * @Route("/", name="to_do_list")
      */
     public function index() {
-        $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy([],['id'=>'DESC']);
-        return $this->render('index.html.twig', ['tasks'=>$tasks]);
+        /*
+        * I want to define the order in a method in the future, 
+        */
+        $order = 0;
+        if (!$order) {
+            $order = 'DESC';
+        }
+        $repo = $this->getDoctrine()
+            ->getRepository(Task::class);
+        $query = $repo->createQueryBuilder('t')
+            ->orderBy('t.id', $order)
+            ->getQuery();
+        if (!$query) {
+            throw $this->createNotFoundException('Not found...');
+        }
+        //$tasks = $this->getDoctrine()->getRepository(Task::class)->findBy([],['id'=>'DESC']);
+        return $this->render('index.html.twig', ['tasks'=>$query->execute()]);
     }
     
     /**
