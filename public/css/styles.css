@@ -3,8 +3,13 @@ body {
   margin: 0;
   min-width: 250px;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background-color: #000;
   font-family: sans-serif;
+=======
+  font-family: sans-serif;
+  background-color: #000;
+>>>>>>> Stashed changes
 =======
   font-family: sans-serif;
   background-color: #000;
@@ -26,11 +31,14 @@ a {
   text-decoration: none;
   color: #ffffff;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 }
 
 h2 {
   font-size: 30px;
   color: #ffffff;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 }
@@ -42,7 +50,11 @@ ul li {
   padding: 12px 8px 12px 40px;
   list-style-type: none;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background: #000;
+=======
+  background: #111111;
+>>>>>>> Stashed changes
 =======
   background: #111111;
 >>>>>>> Stashed changes
@@ -59,7 +71,11 @@ ul li {
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background: #111;
+=======
+  background: #151515;
+>>>>>>> Stashed changes
 =======
   background: #151515;
 >>>>>>> Stashed changes
@@ -73,9 +89,12 @@ ul li:hover {
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background: #000;
   color: #0c0;
 =======
+=======
+>>>>>>> Stashed changes
   background: #151;
   color: #fff;
 >>>>>>> Stashed changes
@@ -112,7 +131,11 @@ ul li.checked::before {
 /* Style the header */
 .header {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background-color: #005;
+=======
+  background-color: #00172b;
+>>>>>>> Stashed changes
 =======
   background-color: #00172b;
 >>>>>>> Stashed changes
@@ -140,6 +163,7 @@ input {
   background-color: #000;
   color: #fff;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 }
 
 .searchbar {
@@ -164,6 +188,8 @@ input {
   font-size: 16px;
   background-color: #000;
   color: #fff;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 }
@@ -199,8 +225,13 @@ input {
 
 .addBtn:hover {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background-color: #111;
   color: #bbb;
+=======
+  background-color: #115;
+  color: #fff;
+>>>>>>> Stashed changes
 =======
   background-color: #115;
   color: #fff;
