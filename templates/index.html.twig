@@ -9,6 +9,7 @@ To Do List
       <input name="title" type="text" id="myInput" placeholder="Task title..." />
       <button type="submit" class="addBtn">Add a task</button>
     </form>
+<<<<<<< Updated upstream
     <form method="POST" name="selector">
       <select name="sort" class="sorter" onChange=alertVarchange()>
           <option value="id">ID</option>
@@ -16,6 +17,14 @@ To Do List
           <option value="title">Title</option>
       </select>
     </form>
+=======
+    {# 
+    This is the Button for changing the order direction
+    <form method="POST" action="{{path('order_switch')}}">
+      <button type="submit" class="addBtn">Change Order Direction</button>
+    </form> 
+    #}
+>>>>>>> Stashed changes
   </div>
   <ul>
 {% for task in tasks %}
@@ -33,51 +42,13 @@ To Do List
 
 {% block javascripts %}
 <script>
+<<<<<<< Updated upstream
 function alertVarchange() {
   var a = document.getElementById("sort");
   alert(a.options[a.selectedIndex].value);
 }
+=======
+
+>>>>>>> Stashed changes
 </script>
 {% endblock %}
-
-
-    {# <li class="checked">
-      <a href="undone">
-        <span class="task-list-item">Buy eggs</span>
-      </a>
-      <a onclick="return confirm('Are you sure to delete?')" href="delete">
-        <span class="close">X</span>
-      </a>
-    </li>
-    <li>
-      <a href="done">
-        <span class="task-list-item">Meet John</span>
-      </a>
-      <a onclick="return confirm('Are you sure to delete?')" href="delete">
-        <span class="close">X</span>
-      </a>
-    </li>
-    <li>
-      <a href="done">
-        <span class="task-list-item">Read a book</span>
-      </a>
-      <a onclick="return confirm('Are you sure to delete?')" href="delete">
-        <span class="close">X</span>
-      </a>
-    </li>
-    <li>
-      <a href="done">
-        <span class="task-list-item">Learn Doctrine ORM</span>
-      </a>
-      <a onclick="return confirm('Are you sure to delete?')" href="delete">
-        <span class="close">X</span>
-      </a>
-    </li>
-    <li>
-      <a href="done">
-        <span class="task-list-item">Prepare a meal</span>
-      </a>
-      <a onclick="return confirm('Are you sure to delete?')" href="delete">
-        <span class="close">X</span>
-      </a>
-    </li> #}
