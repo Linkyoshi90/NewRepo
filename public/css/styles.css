@@ -2,6 +2,8 @@
 body {
   margin: 0;
   min-width: 250px;
+  font-family: sans-serif;
+  background-color: #000;
 }
 
 /* Include the padding and border in an element's total width and height */
@@ -17,7 +19,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #7c580d;
+  color: #ffffff;
 }
 
 /* Style the list items */
@@ -26,7 +28,7 @@ ul li {
   position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
-  background: #fcf2cb;
+  background: #111111;
   font-size: 18px;
   transition: 0.2s;
 
@@ -39,17 +41,17 @@ ul li {
 
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
-  background: #fcf2cb;
+  background: #151515;
 }
 
 /* Darker background-color on hover */
 ul li:hover {
-  background: #ff8926;
+  background: #555;
 }
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-  background: #ff8926;
+  background: #151;
   color: #fff;
   text-decoration: line-through;
 }
@@ -58,7 +60,7 @@ ul li.checked {
 ul li.checked::before {
   content: "";
   position: absolute;
-  border-color: #ffb00d;
+  border-color: #0c0;
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -83,7 +85,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: #1e4363;
+  background-color: #00172b;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -105,6 +107,8 @@ input {
   padding: 10px;
   float: left;
   font-size: 16px;
+  background-color: #000;
+  color: #fff;
 }
 
 /* Style the "Add" button */
@@ -123,7 +127,8 @@ input {
 }
 
 .addBtn:hover {
-  background-color: #ffb00d;
+  background-color: #115;
+  color: #fff;
 }
 
 .task-list-item {
