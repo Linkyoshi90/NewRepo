@@ -2,8 +2,13 @@
 body {
   margin: 0;
   min-width: 250px;
+<<<<<<< Updated upstream
   background-color: #000;
   font-family: sans-serif;
+=======
+  font-family: sans-serif;
+  background-color: #000;
+>>>>>>> Stashed changes
 }
 
 /* Include the padding and border in an element's total width and height */
@@ -20,11 +25,14 @@ ul {
 a {
   text-decoration: none;
   color: #ffffff;
+<<<<<<< Updated upstream
 }
 
 h2 {
   font-size: 30px;
   color: #ffffff;
+=======
+>>>>>>> Stashed changes
 }
 
 /* Style the list items */
@@ -33,7 +41,11 @@ ul li {
   position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
+<<<<<<< Updated upstream
   background: #000;
+=======
+  background: #111111;
+>>>>>>> Stashed changes
   font-size: 18px;
   transition: 0.2s;
 
@@ -46,7 +58,11 @@ ul li {
 
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
+<<<<<<< Updated upstream
   background: #111;
+=======
+  background: #151515;
+>>>>>>> Stashed changes
 }
 
 /* Darker background-color on hover */
@@ -56,8 +72,13 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
+<<<<<<< Updated upstream
   background: #000;
   color: #0c0;
+=======
+  background: #151;
+  color: #fff;
+>>>>>>> Stashed changes
   text-decoration: line-through;
 }
 
@@ -90,7 +111,11 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
+<<<<<<< Updated upstream
   background-color: #005;
+=======
+  background-color: #00172b;
+>>>>>>> Stashed changes
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -114,6 +139,7 @@ input {
   font-size: 16px;
   background-color: #000;
   color: #fff;
+<<<<<<< Updated upstream
 }
 
 .searchbar {
@@ -138,6 +164,8 @@ input {
   font-size: 16px;
   background-color: #000;
   color: #fff;
+=======
+>>>>>>> Stashed changes
 }
 
 /* Style the "Add" button */
@@ -170,8 +198,13 @@ input {
 }
 
 .addBtn:hover {
+<<<<<<< Updated upstream
   background-color: #111;
   color: #bbb;
+=======
+  background-color: #115;
+  color: #fff;
+>>>>>>> Stashed changes
 }
 
 .task-list-item {
