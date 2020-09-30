@@ -9,12 +9,12 @@ To Do List
       <input name="title" type="text" id="myInput" placeholder="Task title..." />
       <button type="submit" class="addBtn">Add a task</button>
     </form>
-    {# 
+    {#
     This is the Button for changing the order direction
-    <form method="POST" action="{{path('order_switch')}}">
+    Error: An exception has been thrown during the rendering of a template ("Unable to generate a URL for the named route "order_switch" as such route does not exist.").
+    {# <form method="POST" action="{{path('order_switch')}}">
       <button type="submit" class="addBtn">Change Order Direction</button>
-    </form> 
-    #}
+    </form>  #}
   </div>
   <ul>
 {% for task in tasks %}

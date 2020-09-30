@@ -43,31 +43,25 @@ class ToDoListController extends AbstractController
             return $this->redirectToRoute('to_do_list');
         }
         /*
-        This code throws errors, so I commented it out
-        $whereStatement = 't.title = ' . $title;
+        The code for Duplicate control
+        */
         $repo = $this->getDoctrine()
             ->getRepository(Task::class);
         $query = $repo->createQueryBuilder('t')
-            ->where('t.title = :title')
-            ->setParameter('title', $title)
+            ->where('t.title = :ttl')
+            ->setParameter('ttl', $title)
             ->getQuery();
         $queryResult = $query->execute();
-        if ($queryResult != $title) {
+        if ($queryResult['title'] != $title) {
             $entityManager = $this->getDoctrine()->getManager();
             $task = new Task;
-            $task->setTitle($title);
+            $task->setTitle($queryResult['title']);
             $entityManager->persist($task);
             $entityManager->flush();
         }
         else {
             throw Exception("Already exists");
         }
-        */
-        $entityManager = $this->getDoctrine()->getManager();
-        $task = new Task;
-        $task->setTitle($title);
-        $entityManager->persist($task);
-        $entityManager->flush();
         return $this->redirectToRoute('to_do_list');
     }
 
@@ -77,7 +71,7 @@ class ToDoListController extends AbstractController
     public function switchStatus($id) {
         $entityManager = $this->getDoctrine()->getManager();
         $task = $entityManager->getRepository(Task::class)->find($id);
-        $task->setStatus(! $task->getStatus() );
+        $task->setStatus(!$task->getStatus());
         $entityManager->flush();
         return $this->redirectToRoute('to_do_list');
     }
@@ -98,16 +92,17 @@ class ToDoListController extends AbstractController
     /**
      * @Route("/delete/{id}", name="task_delete")
      */
-    public function delete(int $id) {
+    public function delete($id) {
         $entityManager = $this->getDoctrine()->getManager();
         $repo = $this->getDoctrine()
             ->getRepository(Task::class);
         $query = $repo->createQueryBuilder('t')
             ->delete('Task', 't')
-            ->where('t.id = :id')
-            ->setParameter('id', $id);
+            ->where('t.id = :ident')
+            ->setParameter('ident', $id);
         $query->execute();
         // Attempted to call an undefined method named "execute" of class "Doctrine\ORM\QueryBuilder".
+        $entityManager->flush();
         return $this->redirectToRoute('to_do_list');
     }
 }
