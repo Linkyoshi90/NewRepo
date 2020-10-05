@@ -1,5 +1,0 @@
-web_profiler:
-    toolbar: %kernel.debug%
-framework:
-    profiler:
-        enabled: %kernel.debug%
