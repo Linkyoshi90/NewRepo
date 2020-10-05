@@ -9,12 +9,9 @@ To Do List
       <input name="title" type="text" id="myInput" placeholder="Task title..." />
       <button type="submit" class="addBtn">Add a task</button>
     </form>
-    {# 
-    This is the Button for changing the order direction
-    <form method="POST" action="{{path('order_switch')}}">
+     <form method="POST" action="{{path('order_switch')}}">
       <button type="submit" class="addBtn">Change Order Direction</button>
-    </form> 
-    #}
+    </form>  
   </div>
   <ul>
 {% for task in tasks %}
@@ -29,9 +26,6 @@ To Do List
 {% endfor %}
   </ul>
 {% endblock %}
-
 {% block javascripts %}
-<script>
-
-</script>
+<script></script>
 {% endblock %}
